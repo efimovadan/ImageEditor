@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="91.0" style="-fx-background-color: #3c3f41; -fx-background-radius: 0; -fx-border-width: 3; -fx-border-color: #bbbbbb;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <GridPane prefHeight="65.0" prefWidth="98.0" styleClass="node-overlay">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="62.0" minWidth="45.0" prefWidth="54.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="39.0" minWidth="22.0" prefWidth="26.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="titleBar" text="Node" textFill="#bbbbbb" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" style="-fx-background-color: #2b2b2b;" text="X" textFill="#bbbbbb" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="9.0" />
+               </GridPane.margin>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis></Button>
+                <TextField fx:id="valueField" styleClass="valueField" text="0" GridPane.rowIndex="1" />
+                <AnchorPane fx:id="outputLinkHandle" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0" styleClass="outputLinkHandle" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <Circle fill="#b99bf8" layoutX="12.0" layoutY="15.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                    </children>
+               <GridPane.margin>
+                  <Insets bottom="1.0" right="8.0" />
+               </GridPane.margin>
+                </AnchorPane>
+            </children>
+        </GridPane>
+    </children>
+   <rotationAxis>
+      <Point3D z="3.0" />
+   </rotationAxis>
+</fx:root>
