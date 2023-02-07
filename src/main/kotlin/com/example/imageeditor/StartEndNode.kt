@@ -3,7 +3,6 @@ package com.example.imageeditor
 import javafx.event.EventHandler
 import javafx.fxml.FXML
 import javafx.scene.control.Button
-import javafx.scene.control.Label
 import javafx.scene.paint.Paint
 import javafx.stage.FileChooser
 import org.opencv.core.Mat
@@ -73,8 +72,6 @@ class EndNode : ImageNode() {
         rootPane!!.onDragDetected = null
 
         nodes["firstLink"] = Triple(firstLink!!, null, NodeTypes.IMAGE)
-
-        (firstLink!!.children.find { it is Label } as Label).text = "img"
 
         saveButton!!.onAction = EventHandler {
             val mat = nodes["firstLink"]!!.second?.getValue() as Mat? ?: return@EventHandler

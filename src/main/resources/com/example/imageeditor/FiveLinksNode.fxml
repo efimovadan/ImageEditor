@@ -7,25 +7,26 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<fx:root fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="161.0" prefWidth="96.0" style="-fx-background-color: #3c3f41; -fx-background-radius: 0; -fx-border-width: 3; -fx-border-color: #bbbbbb;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="161.0" prefWidth="189.0" style="-fx-background-color: #3c3f41; -fx-background-radius: 0; -fx-border-width: 1; -fx-border-color: #000000;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" visible="false" x="-52.0" y="178.0" />
+      <AnchorPane layoutX="51.0" layoutY="2.0" prefHeight="158.0" prefWidth="136.0" style="-fx-background-color: #b094ec;" />
+        <ImageView fx:id="imageView" fitHeight="108.0" fitWidth="125.0" layoutX="14.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true" visible="false" x="45.0" y="62.0" />
         <GridPane prefHeight="150.0" prefWidth="80.0">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="7.0" prefWidth="46.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="34.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="7.0" prefWidth="45.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="0.0" prefWidth="35.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                     <children>
-                        <Label fx:id="titleBar" layoutY="10.0" text="Label" textFill="#bbbbbb">
+                        <Label fx:id="titleBar" layoutX="10.0" layoutY="12.0" text="Label">
                      <rotationAxis>
                         <Point3D y="1.0" z="1.0" />
                      </rotationAxis>
@@ -43,28 +44,31 @@
                 <Button fx:id="deleteButton" mnemonicParsing="false" style="-fx-background-color: #2b2b2b;" text="X" textFill="#bbbbbb" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="12.0" />
-               </font></Button>
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="105.0" left="107.0" />
+               </GridPane.margin></Button>
                 <AnchorPane fx:id="firstLink" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0">
                     <children>
-                        <Circle fill="#b99bf8" layoutX="13.0" layoutY="17.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Label text="var1" textAlignment="RIGHT" translateX="3.0" translateY="8.0" />
+                        <Circle fill="#b99bf8" layoutX="-7.0" layoutY="17.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="var1" textAlignment="RIGHT" textFill="#bbbbbb" translateX="3.0" translateY="8.0" />
                     </children>
                <GridPane.margin>
-                  <Insets bottom="1.0" left="8.0" top="2.0" />
+                  <Insets bottom="1.0" left="7.0" top="2.0" />
                </GridPane.margin>
                 </AnchorPane>
                 <AnchorPane fx:id="outputLinkHandle" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0" styleClass="outputLinkHandle" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <children>
-                        <Circle fill="#b99bf8" layoutX="13.0" layoutY="16.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="#b99bf8" layoutX="14.0" layoutY="16.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
                     </children>
                <GridPane.margin>
-                  <Insets />
+                  <Insets left="129.0" />
                </GridPane.margin>
                 </AnchorPane>
                 <AnchorPane fx:id="secondLink" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                     <children>
-                        <Circle centerX="1.0" fill="#b99bf8" layoutX="13.0" layoutY="16.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Label text="var2" textAlignment="RIGHT" translateX="3.0" translateY="8.0" />
+                        <Circle centerX="1.0" fill="#b99bf8" layoutX="-8.0" layoutY="16.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="var2" textAlignment="RIGHT" textFill="#bbbbbb" translateX="3.0" translateY="8.0" />
                     </children>
                <GridPane.margin>
                   <Insets bottom="1.0" left="8.0" top="2.0" />
@@ -72,8 +76,8 @@
                 </AnchorPane>
                 <AnchorPane fx:id="thirdLink" layoutX="10.0" layoutY="42.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                     <children>
-                        <Circle fill="#b99bf8" layoutX="13.0" layoutY="16.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Label text="var3" textAlignment="RIGHT" translateX="3.0" translateY="8.0" />
+                        <Circle fill="#b99bf8" layoutX="-7.0" layoutY="16.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="var3" textAlignment="RIGHT" textFill="#bbbbbb" translateX="3.0" translateY="8.0" />
                     </children>
                <GridPane.margin>
                   <Insets bottom="1.0" left="8.0" top="2.0" />
@@ -81,8 +85,8 @@
                 </AnchorPane>
                 <AnchorPane fx:id="fourthLink" layoutX="10.0" layoutY="76.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                     <children>
-                        <Circle fill="#b99bf8" layoutX="13.0" layoutY="16.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Label text="var4" textAlignment="RIGHT" translateX="3.0" translateY="8.0" />
+                        <Circle fill="#b99bf8" layoutX="-7.0" layoutY="16.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="var4" textAlignment="RIGHT" textFill="#bbbbbb" translateX="3.0" translateY="8.0" />
                     </children>
                <GridPane.margin>
                   <Insets bottom="1.0" left="8.0" top="2.0" />
@@ -90,8 +94,8 @@
                 </AnchorPane>
                 <AnchorPane fx:id="fifthLink" layoutX="10.0" layoutY="108.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
                     <children>
-                        <Circle fill="#b99bf8" layoutX="13.0" layoutY="16.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Label text="var5" textAlignment="RIGHT" translateX="3.0" translateY="8.0" />
+                        <Circle fill="#b99bf8" layoutX="-6.0" layoutY="16.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="var5" textAlignment="RIGHT" textFill="#bbbbbb" translateX="3.0" translateY="8.0" />
                     </children>
                <GridPane.margin>
                   <Insets bottom="1.0" left="8.0" top="2.0" />

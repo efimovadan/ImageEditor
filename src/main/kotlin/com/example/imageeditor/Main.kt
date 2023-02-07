@@ -17,7 +17,7 @@ class Window {
     private val height = primaryScreenBounds.height - 20
     private var scene = Scene(root, width, height)
     fun start(): Scene {
-        root.style = "-fx-background-color: #2b2b2b;"
+        root.style = "-fx-background-color: #505050;"
         addButtons()
         setStartEndNodes()
 
@@ -27,6 +27,8 @@ class Window {
     private fun setStartEndNodes() {
         val start = ImgNode()
         val end = EndNode()
+        val deleteButton = start.lookup("#deleteButton")
+        deleteButton.isVisible = false
 
         start.layoutX = 50.0
         start.layoutY = 50.0
@@ -42,7 +44,7 @@ class Window {
         hbox.style = "-fx-background-color: #3c3f41;"
         hbox.prefWidth = primaryScreenBounds.width
         hbox.prefHeight = 55.0
-        val buttonsName = arrayOf("Float", "Int", "String", "Image", "Add Text", "Grey", "Brightness", "Sepia", "Invert", "Blur", "Move", "Scale", "Rotate", "Add Image", "Merge")
+        val buttonsName = arrayOf("Float", "Int", "String", "Add Text", "Grey", "Brightness", "Sepia", "Invert", "Blur", "Move", "Scale", "Rotate", "Add Image", "Merge")
         for (buttonTitle in buttonsName) {
             val button = Button(buttonTitle)
             button.style = "-fx-background-color: #3c3f41; -fx-font-size: 20px; -fx-font-family: Serif; -fx-text-fill: #afb1b3"
@@ -68,7 +70,6 @@ class Window {
             "Float" -> FloatNode()
             "Int" -> IntNode()
             "String" -> StringNode()
-            "Image" -> ImgNode()
             "Add Text" -> AddTextPercentNode()
             "Grey" -> GreyNode()
             "Brightness" -> BrightnessNode()
